@@ -111,7 +111,7 @@ setInterval(()=>{
     .getPropertyValue('left'));
     console.log(mudTop);
     if(mudTop > 664) {
-        mud.removeAttribute("display")
+        mud.removeAttribute("style")
     };
     if(mudTop > 600 && mudTop < 664 && PotatoDogLeft < 200) {
         alert("Game Over!")
