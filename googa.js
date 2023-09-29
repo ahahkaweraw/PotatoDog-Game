@@ -21,15 +21,15 @@ document.getElementById("submit").onclick = function() {
 function potatowalk() {
     if(counter == 0) {
         PotatoDog.classList.add('potatowalk');
-        counter= counter+1;
+        counter = counter+1;
     }
-    else if(counter == 1){
+    else if(counter == 1) {
         PotatoDog.classList.add('potatowalk2');
-        console.log("potatoeypotatoes")
+        counter = counter+1;
     }
     else{
         PotatoDog.classList.add('potatowalk3');
-    };
+    }
     
 }
 function newquestionstart() {
@@ -107,13 +107,37 @@ function checkanswer() {
 setInterval(()=>{
     const mudTop = parseInt(window.getComputedStyle(mud)
     .getPropertyValue('top'));
+    const mud1Top = parseInt(window.getComputedStyle(mud1)
+    .getPropertyValue('top'));
+    const mud2Top = parseInt(window.getComputedStyle(mud2)
+    .getPropertyValue('top'));
     const PotatoDogLeft = parseInt(window.getComputedStyle(PotatoDog)
     .getPropertyValue('left'));
-    console.log(mudTop);
+    console.log(mud1Top)
     if(mudTop > 664) {
-        mud.removeAttribute("style")
-    };
+        mud.style.visibility = "hidden";
+    }
+    if(mud1Top > 500) {
+        mud1.style.visibility = "hidden";
+    }
+    if(mud2Top > 400) {
+        mud2.style.visibility = "hidden";
+    }
     if(mudTop > 600 && mudTop < 664 && PotatoDogLeft < 200) {
         alert("Game Over!")
+        location.reload
     };
+    if(mud1Top > 400 && mud1Top < 500 && PotatoDogLeft < 350) {
+        alert("Game Over!")
+        location.reload
+    };
+    if(mud2Top > 300 && mud2Top < 400 && PotatoDogLeft < 700) {
+        alert("Game Over!")
+        location.reload
+    };
+    if(PotatoDogLeft == 810) {
+        alert("POTATO VICTORY")
+        window.location.href = "https://shattereddisk.github.io/rickroll/rickroll.mp4"
+    }
+
 },50)

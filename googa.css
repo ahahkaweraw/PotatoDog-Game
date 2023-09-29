@@ -85,11 +85,11 @@ img{
     100%{left: 270px}
 }
 @keyframes potato2{
-    0%{left: 0px}
+    0%{left: 270px}
     100%{left: 540px}
 }
-@keyframes potato2{
-    0%{left: 0px}
+@keyframes potato3{
+    0%{left: 540px}
     100%{left: 810px}
 }
 .potatowalk {
