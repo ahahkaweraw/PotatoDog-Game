@@ -17,9 +17,9 @@ img{
     margin: 0;
 }
 #GameBoard{
-    width: 818px;
-    height: 800px;
-    border: 3px solid;
+    width: 50%;
+    height: 90vh;
+    border: 2.5px solid;
     background-image: url(PotatoDogBackground.png);
     background-size: cover;
     margin: auto;
@@ -39,7 +39,7 @@ img{
     background-image: url(mudtexture.png);
     background-size: cover;
     animation: mud;
-    animation-duration: 60s;
+    animation-duration: 80s;
     animation-timing-function: linear;
     animation-iteration-count: unset;
     bottom: 0px;
@@ -50,7 +50,7 @@ img{
     position: relative;
     background-image: url(mudtexture.png);
     background-size: cover;
-    left: 250px;
+    left: 275px;
     bottom: 75px;
     animation: mud1 forwards;
     animation-duration: 120s;

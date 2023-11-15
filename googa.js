@@ -113,7 +113,6 @@ setInterval(()=>{
     .getPropertyValue('top'));
     const PotatoDogLeft = parseInt(window.getComputedStyle(PotatoDog)
     .getPropertyValue('left'));
-    console.log(mud1Top)
     if(mudTop > 664) {
         mud.style.visibility = "hidden";
     }
@@ -124,20 +123,21 @@ setInterval(()=>{
         mud2.style.visibility = "hidden";
     }
     if(mudTop > 600 && mudTop < 664 && PotatoDogLeft < 200) {
-        alert("Game Over!")
-        location.reload
-    };
-    if(mud1Top > 400 && mud1Top < 500 && PotatoDogLeft < 350) {
-        alert("Game Over!")
-        location.reload
-    };
-    if(mud2Top > 300 && mud2Top < 400 && PotatoDogLeft < 700) {
-        alert("Game Over!")
-        location.reload
-    };
-    if(PotatoDogLeft == 810) {
-        alert("POTATO VICTORY")
-        window.location.href = "https://shattereddisk.github.io/rickroll/rickroll.mp4"
+        confirm("Game Over! Would you like to play again?");
+        window.location.reload(true);
     }
-
+    else if(mud1Top > 400 && mud1Top < 500 && PotatoDogLeft < 350) {
+        alert("Game Over! Would you like to play again?");
+        window.location.reload(true);
+    }
+    else if(mud2Top > 300 && mud2Top < 400 && PotatoDogLeft < 700) {
+        confirm("Game Over! Would you like to play again?");
+        window.location.reload(true);
+    }
+    else if(PotatoDogLeft == 810) {
+        if(confirm("POTATO VICTORY!!!")) {
+            window.location.href = "https://shattereddisk.github.io/rickroll/rickroll.mp4"
+        }
+    }
 },50)
+
